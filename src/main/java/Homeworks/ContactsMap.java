@@ -8,12 +8,14 @@ public class ContactsMap {
             String currentName = str[1];
             currentNumbersList = contactsMap.get(currentName);
             currentNumbersList.add(str[2]);
+            currentNumbersList.sort(Comparator.naturalOrder());
             contactsMap.put(currentName, currentNumbersList);
         }
         else{
             String currentName = str[1];
             LinkedList<String> currentNumbersList = new LinkedList<>();
             currentNumbersList.add(str[2]);
+            currentNumbersList.sort(Comparator.naturalOrder());
             contactsMap.put(currentName, currentNumbersList);
         }
     }
